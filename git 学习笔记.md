@@ -38,13 +38,13 @@
 
    回车执行，确认相关信息（存储路径、访问密码（用于访问该公钥，不是github登录密码））
 
-   ![image-20200225174339814](E:\workspace\md_img\md_img\image-20200225174339814.png)
+   ![image-20200225174339814](https://raw.githubusercontent.com/ChCh1999/md_img/master/md_img/image-20200225174339814.png)
 
 2. 将公钥添加到github
 
    复制存储路径 （一般为：`C:\Users\用户名\.ssh` ）下公钥内容：使用notepad++或其他相关工具打开 ***id_rsa.pub*** 到github->setting->SSH and GPG keys->New SSH key，输入公钥备注，粘贴公钥内容，确认即可完成
 
-   ![image-20200225174600099](E:\workspace\md_img\md_img\image-20200225174600099.png)
+   ![image-20200225174600099](https://raw.githubusercontent.com/ChCh1999/md_img/master/md_img/image-20200225174600099.png)
 
 3. 测试连接
 
@@ -56,7 +56,7 @@
 
    + 首次连接可能会出现ip验证：
 
-   ![image-20200225174859419](E:\workspace\md_img\md_img\image-20200225174859419.png)
+   ![image-20200225174859419](https://raw.githubusercontent.com/ChCh1999/md_img/master/md_img/image-20200225174859419.png)
 
    ​		输入**yes**回车确认，将github的ip加入到已知列表，以后便可以顺利连接github
 
@@ -81,3 +81,20 @@ git clone git://github.com/fsliurujie/test.git          --GIT协议
 git clone https://github.com/fsliurujie/test.git      --HTTPS协议
 ```
 
+### 文件操作
+
++ 基本快照：`git add`命令可以将文件添加到缓存，即提交修改到系统。
++ 查看状态：`git status`
+  + 状态
+    + A: 添加
+    + AM:添加后有修改
+
++ 提交修改 :`git commit`
+  + 自定义信息: `git commit -m <msg>`
+  + 从文件：`git commit -F <file>`
+
++ 取消缓存：重置缓存中的内容 `git reset HEAD` 
+
++ 删除： `git rm`从工作目录删除文件
+
++ 移动或重命名： `git mv <源文件> <目标位置与文件名>`
